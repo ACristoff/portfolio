@@ -15,7 +15,10 @@ const Header  = () => {
             </Typography>
             
             <nav>
-                [Nav Links]
+                [web]
+                [games]
+                [blog]
+                [contact]
             </nav>
         </div>
     )
