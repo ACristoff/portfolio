@@ -14,7 +14,7 @@ const experiences = [
         position: 'Full Stack Engineer',
         height: 60,
         width: 300,
-        description: 'Working within the web team to provide a AAA web experience for Gears of War fans, as well as providing value to the studio by supporting internal development.'
+        description: 'Working within the web team to provide a triple A web experience for Gears of War fans, as well as providing value to the studio by supporting internal development.'
     },
     {
         name: 'Espresso Dolce',
@@ -55,6 +55,7 @@ const ExperienceCarousel = () => {
                 centerSlidePercentage={30}
                 swipeable
                 emulateTouch
+                showThumbs={false}
                 // autoPlay
                 infiniteLoop
                 showStatus={false}
@@ -69,7 +70,8 @@ const ExperienceCarousel = () => {
                                     marginLeft: 50,
                                     marginRight: 50,
                                     marginBottom:35,
-                                    padding:5
+                                    padding:10,
+                                    minHeight: 200
                                 }}
                             >
                                 <div 
