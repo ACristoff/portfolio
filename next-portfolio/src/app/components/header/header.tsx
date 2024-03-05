@@ -7,16 +7,14 @@ const Header  = () => {
     return (
         <div>
             [Avatar?]
-
-            <Typography variant="h1">Alex Cristoffanini</Typography> 
+            <Typography variant="h1">ALEX CRISTOFFANINI</Typography> 
             [Social Media Links]
             <Typography variant="h3">
             [Software Engineer / Web Developer / Game Developer]
             </Typography>
-            
             <nav>
                 [web]
-                [games]
+                [game dev]
                 [blog]
                 [contact]
             </nav>

@@ -48,51 +48,51 @@ const experiences = [
 
 const ExperienceCarousel = () => {
     return (
-        <section>
-            <Carousel 
-                useKeyboardArrows
-                centerMode
-                centerSlidePercentage={30}
-                swipeable
-                emulateTouch
-                showThumbs={false}
-                // autoPlay
-                infiniteLoop
-                showStatus={false}
-                // interval={}
-            >
-                {experiences.map((e) => {
-                    return (
-                            <Paper 
-                                elevation={3} 
-                                key={e.name} 
+        <Carousel 
+            useKeyboardArrows
+            centerMode
+            centerSlidePercentage={40}
+            swipeable
+            emulateTouch
+            showThumbs={false}
+            autoPlay
+            infiniteLoop
+            showStatus={false}
+            interval={6000}
+            // width='50%'
+        >
+            {experiences.map((e) => {
+                return (
+                        <Paper 
+                            elevation={3} 
+                            key={e.name} 
+                            style={{
+                                marginLeft: 50,
+                                marginRight: 50,
+                                marginBottom:35,
+                                padding:15,
+                                minHeight: 200
+                            }}
+                        >
+                            <div 
                                 style={{
-                                    marginLeft: 50,
-                                    marginRight: 50,
-                                    marginBottom:35,
-                                    padding:10,
-                                    minHeight: 200
+                                    width:'100%',
+                                    display: 'flex',
+                                    // flexDirection: 'column',
+                                    justifyContent: 'center'
                                 }}
                             >
-                                <div 
-                                    style={{
-                                        width:'100%',
-                                        display: 'flex',
-                                        // flexDirection: 'column',
-                                        justifyContent: 'center'
-                                    }}
-                                >
-                                    <div style={{width: e.width}}>
-                                        <Image src={`${e.image}`} alt={e.name} width={e.width} height={e.height}/>
-                                    </div>
-                                </div>                            
-                                <Typography variant='h4'>{e.position}</Typography>
-                                <Typography variant='body2'>{e.description}</Typography>
-                            </Paper>
-                    )
-                })}
-            </Carousel>
-        </section>
+                                <div style={{width: e.width}}>
+                                    <Image src={`${e.image}`} alt={e.name} width={e.width} height={e.height}/>
+                                </div>
+                            </div>                            
+                            <Typography variant='h4'>{e.position}</Typography>
+                            <Typography variant='body1'>@ {e.name}</Typography>
+                            <Typography variant='body2'>{e.description}</Typography>
+                        </Paper>
+                )
+            })}
+        </Carousel>
     )
 }
 
