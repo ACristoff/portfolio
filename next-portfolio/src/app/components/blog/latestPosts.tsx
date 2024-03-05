@@ -12,7 +12,7 @@ const Post = () => {
 const LatestPosts = () => {
     return (
         <Box >
-            <Typography>Latest posts</Typography>
+            <Typography variant='h5'>Latest posts</Typography>
             <Stack direction='row' spacing={2}>
                 <Post />
                 <Post />

@@ -59,7 +59,7 @@ const ExperienceCarousel = () => {
             infiniteLoop
             showStatus={false}
             interval={6000}
-            // width='50%'
+            width='100%'
         >
             {experiences.map((e) => {
                 return (
