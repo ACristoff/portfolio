@@ -60,6 +60,9 @@ const Footer = () => {
                             <Typography>email</Typography>
                         </Stack>
                     </Grid>
+                    {
+                        //TODO add steam icon once I have my steam page up
+                    }
                 </Grid> 
             </Stack>
         </Container>
