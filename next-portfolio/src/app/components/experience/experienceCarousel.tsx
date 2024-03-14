@@ -5,6 +5,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 import { Card, Paper, Typography } from '@mui/material';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
 const experiences = [
     {
@@ -45,13 +46,45 @@ const experiences = [
     },
 ]
 
+const getWindowDimensions = () => {
+    const { innerWidth: width, innerHeight: height } = window;
+    return {
+        width,
+        height
+    };
+};
+
+const useWindowDimensions = () => {
+    const [windowDimensions, setWindowDimensions] = useState(
+        getWindowDimensions()
+    );
+    useEffect(() => {
+        function handleResize() {
+            setWindowDimensions(getWindowDimensions());
+        }
+    window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+    return windowDimensions;
+};
 
 const ExperienceCarousel = () => {
+
+    const carouselWidth = useWindowDimensions().width >= 800 ? 40 : 100
+    const [carouselMode, setCarouselMode] = useState(carouselWidth)
+
+    useEffect(() => {
+
+        console.log(carouselWidth)
+        setCarouselMode(carouselWidth)
+
+    }, [carouselWidth])
+
     return (
         <Carousel 
             useKeyboardArrows
             centerMode
-            centerSlidePercentage={40}
+            centerSlidePercentage={carouselMode}
             swipeable
             emulateTouch
             showThumbs={false}
