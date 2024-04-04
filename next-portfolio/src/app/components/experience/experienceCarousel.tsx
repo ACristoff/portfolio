@@ -50,26 +50,31 @@ const getWindowDimensions = () => {
     return {
         width,
         height
-    };
-};
+    }
+}
 
 const useWindowDimensions = () => {
     const [windowDimensions, setWindowDimensions] = useState(
         getWindowDimensions()
-    );
+    )
+
     useEffect(() => {
         function handleResize() {
-            setWindowDimensions(getWindowDimensions());
+            setWindowDimensions(getWindowDimensions())
         }
-    window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
-    return windowDimensions;
-};
+    window.addEventListener("resize", handleResize)
+        return () => window.removeEventListener("resize", handleResize)
+    }, [])
+
+    return windowDimensions
+}
 
 const ExperienceCarousel = () => {
 
-    const carouselWidth = useWindowDimensions().width >= 800 ? 40 : 100
+    let carouselWidth = 40
+    if (typeof window !== "undefined") {
+        carouselWidth = useWindowDimensions().width >= 800 ? 40 : 100
+    }
     const [carouselMode, setCarouselMode] = useState(carouselWidth)
 
     useEffect(() => {
