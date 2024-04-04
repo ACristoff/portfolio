@@ -78,10 +78,7 @@ const ExperienceCarousel = () => {
     const [carouselMode, setCarouselMode] = useState(carouselWidth)
 
     useEffect(() => {
-
-        console.log(carouselWidth)
         setCarouselMode(carouselWidth)
-
     }, [carouselWidth])
 
     return (

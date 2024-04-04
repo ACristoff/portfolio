@@ -4,6 +4,7 @@ import React from 'react'
 const Post = ({ post }) => {
     return (
         <div>
+            <Typography>[Featured Image]</Typography>
             <Typography>{post.title}</Typography>
             <Typography>{post.image}</Typography>
             <Typography>{post.date}</Typography>
@@ -15,11 +16,10 @@ const Post = ({ post }) => {
 
 
 const LatestPosts = ({ posts }) => {
-    console.log(posts[0])
 
     return (
         <Box >
-            <Typography variant='h5'>Latest posts</Typography>
+            <Typography variant='h5'>My blog</Typography>
             <Stack direction='row' spacing={2}>
                 {posts.map((post) => {
                     return (

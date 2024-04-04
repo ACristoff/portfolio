@@ -5,7 +5,7 @@ import { Stack, Typography } from "@mui/material";
 import Blog from "./components/blog/blog";
 import LatestPosts from "./components/blog/latestPosts";
 
-import { getSortedPostsData } from '../lib/posts';
+import { getSortedPostsData, getLatestPosts } from '../lib/posts';
 
 // export async function getStaticProps() {
 //   const allPostsData = getSortedPostsData();
@@ -18,7 +18,7 @@ import { getSortedPostsData } from '../lib/posts';
 
 
 export default function Home() {
-    const posts = getSortedPostsData()
+    const posts = getLatestPosts()
 
     return (
         <main className={styles.main}>
