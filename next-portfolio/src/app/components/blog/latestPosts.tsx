@@ -1,29 +1,19 @@
 import { Box, Stack, Typography } from '@mui/material'
+import PostThumbnail from './postThumbnail'
 import React from 'react'
-
-const Post = ({ post }) => {
-    return (
-        <div>
-            <Typography>[Featured Image]</Typography>
-            <Typography>{post.title}</Typography>
-            <Typography>{post.image}</Typography>
-            <Typography>{post.date}</Typography>
-            <Typography>{post.description}</Typography>
-        </div>
-    )
-}
-
-
 
 const LatestPosts = ({ posts }) => {
 
     return (
         <Box >
             <Typography variant='h5'>My blog</Typography>
-            <Stack direction='row' spacing={2}>
+            <Stack
+                direction={{xs: 'column', md: 'row'}} 
+                spacing={2}
+            >
                 {posts.map((post) => {
                     return (
-                        <Post post={post}  key={post.id}/>
+                        <PostThumbnail post={post} key={post.id}/>
                     )
                 })}
             </Stack>

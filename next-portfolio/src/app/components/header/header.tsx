@@ -9,7 +9,7 @@ const Header  = () => {
             [Avatar?]
             <Typography variant="h1">ALEX CRISTOFFANINI</Typography> 
             [Social Media Links]
-            <Typography variant="h3">
+            <Typography variant="h2">
             [Software Engineer / Web Developer / Game Developer]
             </Typography>
             <nav>

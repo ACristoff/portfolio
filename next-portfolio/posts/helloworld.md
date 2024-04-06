@@ -2,6 +2,7 @@
 title: 'Hello World: A Tale of my new portfolio site'
 date: '2023-03-01'
 description: A journal of my portfolio site project
+image: 'Godot_icon.svg'
 ---
 
 The goal of this project was to build a living CV that is easy to read, and easy to update. To do this I chose the following stack:

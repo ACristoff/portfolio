@@ -25,7 +25,7 @@ export default function Home() {
             <Stack spacing={4} direction='column' >
                 <ExperienceCarousel />
                 <div>
-                    <Typography variant="h4">About Me</Typography>
+                    <Typography variant="h3">About Me</Typography>
                     {
                         //TODO Update this
                     }
